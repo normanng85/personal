@@ -820,8 +820,72 @@ img { display: block; max-width: 100%; }
 }
 
 @media (max-width: 500px) {
-  .section { padding: 4rem 1rem; }
+  .section { padding: 2.5rem 1rem; }
+  .section-title { font-size: 1.6rem; margin-bottom: 2rem; }
   .stat-row { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
   .cred-grid { grid-template-columns: 1fr; }
   .tl-card { padding: 1.25rem 1.25rem; }
+  .about-lead { font-size: 1rem; }
+  .stat-num { font-size: 1.6rem; }
+  .hero-content h1 { font-size: 2.8rem; }
+}
+
+/* ============================================================
+   MOBILE COMPACT — additional improvements
+============================================================ */
+
+/* Shorter hero so first content is visible sooner */
+@media (max-width: 768px) {
+  .hero { min-height: 75vh; }
+  .section { padding: 3.5rem 1rem; }
+  .section-title { margin-bottom: 2.5rem; }
+  .quote-band { height: 160px; }
+
+  /* Coast strip: hide photo panels, show only the text card */
+  .coast-panel:not(.coast-panel-text) { display: none; }
+  .coast-strip { grid-template-columns: 1fr; height: auto; }
+
+  /* About photos: single centered portrait only */
+  .about-photos {
+    flex-direction: column;
+    align-items: center;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  .photo-secondary { display: none; }
+
+  /* Experience accordion — bullets hidden by default */
+  .tl-card > ul { display: none; }
+  .tl-card.tl-open > ul { display: block; }
+
+  /* Toggle button */
+  .tl-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-top: 0.8rem;
+    background: none;
+    border: 1px solid var(--light-gray);
+    border-radius: 20px;
+    padding: 0.28rem 0.85rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--ocean);
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.04em;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+  }
+  .tl-toggle:hover {
+    background: var(--ocean);
+    color: white;
+    border-color: var(--ocean);
+  }
+  .tl-arrow { display: inline-block; transition: transform 0.25s; }
+  .tl-card.tl-open .tl-toggle .tl-arrow { transform: rotate(180deg); }
+}
+
+/* Hide toggle button on desktop */
+@media (min-width: 769px) {
+  .tl-toggle { display: none; }
 }
