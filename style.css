@@ -310,6 +310,25 @@ img { display: block; max-width: 100%; }
   font-size: 0.97rem;
 }
 
+/* personal interest tags */
+.interests-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.interests-tags span {
+  background: var(--off-white);
+  color: var(--navy);
+  border: 1px solid var(--light-gray);
+  border-radius: 20px;
+  padding: 0.3rem 0.85rem;
+  font-size: 0.84rem;
+  font-weight: 500;
+}
+
 /* stat row */
 .stat-row {
   display: grid;
