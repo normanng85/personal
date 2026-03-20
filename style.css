@@ -428,6 +428,11 @@ img { display: block; max-width: 100%; }
   box-shadow: 0 0 0 2px var(--ocean);
 }
 
+.tl-dot-board {
+  background: var(--gold);
+  box-shadow: 0 0 0 2px var(--gold);
+}
+
 .tl-card {
   background: var(--white);
   border-radius: var(--radius);
